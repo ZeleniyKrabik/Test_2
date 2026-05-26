@@ -89,11 +89,4 @@ jobs:
           else
             echo "PR already exists for $PR_HEAD -> $PR_BASE (#$existing); skipping create."
           fi
-      - name: Static HTML Export
-        run: npm run build
-    
-      - name: Create Offline ZIP Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ERP-OFFLINE-DEMO
-          path: out/
+
